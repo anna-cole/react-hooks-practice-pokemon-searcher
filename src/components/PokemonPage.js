@@ -14,11 +14,15 @@ function PokemonPage() {
     .then(pokemons => setPokemons(pokemons))
   }, [])
 
+  function submitNewPokemon(newPokemon) {
+    setPokemons([...pokemons, newPokemon])
+  }
+
   return (
     <Container>
       <h1>Pokemon Searcher</h1>
       <br />
-      <PokemonForm />
+      <PokemonForm submitNewPokemon={submitNewPokemon} />
       <br />
       <Search search={search} onChangeText={e => setSearch(e.target.value)}/>
       <br />

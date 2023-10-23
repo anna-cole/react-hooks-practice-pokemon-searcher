@@ -3,7 +3,7 @@ import { Card } from "semantic-ui-react";
 
 function PokemonCard({ pokemon }) {
   const [clicked, setClicked] = useState(true)
-
+  
   function onClickCard() {
     setClicked(clicked => !clicked)
   }
